@@ -1,21 +1,18 @@
-
 class NotWearingMaskError(Exception):
-
-    def __str__(self) -> str:
-        return "Have no mask"
+    """This exception occurs when
+     the visitor has no mask."""
 
 
 class VaccineError(Exception):
-    pass
+    """This exception occurs when
+     visitor has some problem with the vaccination"""
 
 
 class NotVaccinatedError(VaccineError):
-
-    def __str__(self) -> str:
-        return "Have no vaccine"
+    """This exception occurs when
+    the visitor has exactly no vaccine"""
 
 
 class OutdatedVaccineError(VaccineError):
-
-    def __str__(self) -> str:
-        return "Vaccine is outdated"
+    """This exception occurs when
+    the visitor has an outdated vaccine"""
